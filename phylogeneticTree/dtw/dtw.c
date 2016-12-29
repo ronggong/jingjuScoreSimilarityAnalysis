@@ -110,7 +110,8 @@ double CosineDist(double *A, double *B, int Vector_Length)
     double dot = 0;
     double denom_a = 0; 
     double denom_b = 0;
-    for(int i = 0; i < Vector_Length; ++i) {
+    int i;
+    for(i = 0; i < Vector_Length; ++i) {
         dot += A[i] * B[i] ;
         denom_a += A[i] * A[i] ;
         denom_b += B[i] * B[i] ;

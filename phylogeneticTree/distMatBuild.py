@@ -30,7 +30,11 @@ def sortSimi(distMat,idx_keys):
 
     return dist_pairwise
 
-def simiMat4Tree(score_json_filename,namesSimiMat_filename,idx_line_filename,sort_simi_filename,phrase_subsets):
+def simiMat4Tree(score_json_filename,
+                 namesSimiMat_filename,
+                 idx_line_filename,
+                 sort_simi_filename,
+                 phrase_subsets):
     with open(score_json_filename,'r') as openfile:
         dict_scores = json.load(openfile)
 
