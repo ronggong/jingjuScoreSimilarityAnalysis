@@ -13,4 +13,5 @@ pygraphviz
 graphviz  
 networkx
 unicodecsv  
-cython
+cython  
+music21
