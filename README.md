@@ -11,6 +11,8 @@ matplotlib
 biopython  
 pygraphviz  
 graphviz  
+libgraphviz-dev  
 networkx
 unicodecsv  
-cython
+cython  
+music21
