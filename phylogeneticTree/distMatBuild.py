@@ -47,10 +47,11 @@ def simiMat4Tree(score_json_filename,
     idx_keys     = {}
 
     for ii,key in enumerate(dict_scores):
-        # print key
-        if key.split('_')[0] in phrase_subsets:
+        key = int(key)
+        if key in phrase_subsets:
+            key = str(key)
 
-            idx_keys[ii] = [key.split('_')[0]+'_'+str(int(key.split('_')[1])+1),dict_scores[key]['lyrics']]
+            idx_keys[int(key)] = [dict_scores[key]['arianame']+'_'+str(dict_scores[key]['linenumber']+1), dict_scores[key]['lyrics']]
 
             shengqiang  = dict_scores[key]['shengqiang']
             banshi      = dict_scores[key]['banshi']
@@ -62,7 +63,7 @@ def simiMat4Tree(score_json_filename,
             couplets.append(couplet)
             roletypes.append(roletype)
 
-            identify_phrase = str(ii)+'_'+dict_roletype[roletype]+'_'+dict_shengqiang[shengqiang]\
+            identify_phrase = key+'_'+dict_roletype[roletype]+'_'+dict_shengqiang[shengqiang]\
                               +'_'+dict_banshi[banshi]+'_'+couplet
 
             pitchtrack  = dict_scores[key]['pitchtrack_cents']
